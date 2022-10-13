@@ -1,9 +1,25 @@
-import React from 'react'
-
-function Topbar() {
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { useNavigate } from "react-router-dom";
+function TopBar(props) {
+  let navigate = useNavigate();
   return (
-    <div>Topbar</div>
-  )
+    <>
+      <Navbar bg="primary" variant="dark">
+        <Container>
+          <Navbar.Brand href="javascript(void)">FoodApp</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link onClick={() => navigate("/user-menu")}>Home</Nav.Link>
+            <Nav.Link onClick={() => navigate("/user-cart")}>
+              Cart {props.value.cart.length}
+            </Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
+  );
 }
 
-export default Topbar
+export default TopBar;
