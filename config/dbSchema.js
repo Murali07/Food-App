@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
 
 const foodSchema = new mongoose.Schema({
     name: {type:String, required: true},
-    price: {type:String, required: true},
+    price: {type:Number, required: true},
     description: {type:String, required: true},
     imageUrl: {type:String, default:null}
 })
