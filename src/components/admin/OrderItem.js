@@ -56,7 +56,7 @@ function OrderItem() {
   <div> 
   <div>
   <div className='list-food-wrapper'>
-        <h2>All your Added Foods are here!</h2>
+        <h2>Order Details</h2>
        <div>
        <h3>&#8377; {orderAmount}</h3> 
     <h4>{deliveryAddress}</h4>
