@@ -38,6 +38,10 @@ router.get('/all-food',validateToken, async(req, res) => {
   }
 })
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
 router.post("/add-food", validateToken, adminGaurd, async(req, res) => {
   try{
     let food = await foodModel.create(req.body)

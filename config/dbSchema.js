@@ -30,7 +30,7 @@ const orderSchema = new mongoose.Schema({
     deliveryAddress: {type:String, required:true},
     orderAmount: {type:Number, required:true},
     contact: {type:String, required:true},
-    status: {type:String, default: "ordered"},
+    status: {type:String, default: "Ordered"},
     orderedAt: {type:Date, default:Date.now()}
 })
 
