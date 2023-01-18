@@ -1,5 +1,5 @@
 const env = {
-    apiurl: "http://localhost:4010"
+    apiurl: "https://food-app-s83w.onrender.com"
 }
 
 export default env;
